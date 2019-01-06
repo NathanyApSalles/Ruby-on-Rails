@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+	  <div class="col-md-4 col-md-offset-0">
+
+		<div class="panel panel-info"> 
+
+
+			<div class="panel-heading">Pontuação individual</div>
+
+				<div class="panel-body">
+
+					<div style="text-align: center">
+
+						<%= image_tag "profile.png", :size => '80x80' %>
+					</div>
+					<p>
+					  <strong>Data:</strong>
+					  <%= @pontuation.data %>
+					</p>
+
+					<p>
+					  <strong>Nome:</strong>
+					  <%= @pontuation.nome %>
+					</p>
+
+					<p>
+					  <strong>Idusuario:</strong>
+					  <%= @pontuation.idUsuario %>
+					</p>
+
+					<p>
+					  <strong>Pontos:</strong>
+					  <%= @pontuation.pontos %>
+					</p>
+
+					<%= link_to 'Edit', edit_pontuation_path(@pontuation), class:"btn btn-info" %> 
+					<%= link_to 'Back', pontuations_path, class:"btn btn-info" %>
+				</div>
+		</div>
+	</div>
+</div>

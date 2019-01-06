@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+
+  <h1 class="display-1">Pontuations</h1>
+  
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Data</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Idusuario</th>
+        <th scope="col">Pontos</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @pontuacoes.each do |pontuation| %>
+        <tr scope="row">
+          <td><%= pontuation[0] %></td> 
+          <td><%= pontuation[1] %></td>
+          <td><%= pontuation[2] %></td>
+          <td><%= pontuation[3] %></td>
+          
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Pontuation', new_pontuation_path, class:"btn btn-info" %>
+</div>

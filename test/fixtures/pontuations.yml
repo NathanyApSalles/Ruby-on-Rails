@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2018-12-10
+  nome: MyString
+  idUsuario: 1
+  pontos: 1
+
+two:
+  data: 2018-12-10
+  nome: MyString
+  idUsuario: 1
+  pontos: 1

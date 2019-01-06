@@ -1,0 +1,64 @@
+<div class="container">
+  <%= form_with(model: pontuation, local: true) do |form| %>
+    <% if pontuation.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(pontuation.errors.count, "error") %> prohibited this pontuation from being saved:</h2>
+
+        <ul>
+        <% pontuation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="row">
+      <div class="form-group">
+          <div class="field">
+            <%= form.label :data, class:"control-label col-md-1" %>
+            <div class="col-md-8">
+              <%= form.date_select :data, id: :pontuation_data, class:"form-control" %>
+            </div>
+          </div>
+      </div>
+    </div>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <div class="row">
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :nome, class:"control-label col-md-1" %>
+          <div class="col-md-8 ">
+            <%= form.text_field :nome, id: :pontuation_nome, class:"form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>   
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <div class="row">
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :idUsuario, class:"control-label col-md-1" %>
+          <div class="col-md-8">
+            <%= form.number_field :idUsuario, id: :pontuation_idUsuario, class:"form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <div class="row">
+      <div class="form-group">
+        <div class="field">
+          <%= form.label :pontos, class:"control-label col-md-1" %>
+          <div class="col-md-8 ">
+            <%= form.number_field :pontos, id: :pontuation_pontos, class:"form-control" %>
+          </div>
+        </div>
+      </div>
+    </div>
+    <td>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+    <div class="form-group">
+      <div class="actions">
+        <%= form.submit class:"btn btn-default"%>
+      </div>
+    </div>
+  <% end %>
+</div>
